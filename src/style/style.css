@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url('/src/img/background\ img.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+main {
+  background-color: rgba(0, 0, 0, 0.712);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-search {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  color: black;
+  font-size: 20px;
+  outline-style: none;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+.poke-container {
+  background-color: crimson;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 650px;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+form button {
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: gray;
+  padding: 5px;
+}
+form button:hover {
+  background-color: gray;
+  color: white;
+}
+.inital-info-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.title-pokedex {
+  margin: 10px;
+  font-size: 40px;
+}
+.poke-container h1 {
+  font-size: 30px;
+  color: yellow;
+  text-shadow: 1px 1px black;
+  max-width: 650px;
+}
+.imagem-principal {
+  background-color: rgba(0, 0, 0, 0.425);
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+  padding: 5px;
+}
+.img-container {
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+}
+.description-poke {
+  padding: 5px;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+.description-poke p {
+  height: 100px;
+  font-size: 17px;
+}
+span {
+  display: block;
+}
+.pokeInfo-container {
+  padding-left: 10px;
+}
+.otherInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  background-color: rgb(15, 78, 121);
+  padding: 20px;
+  border-radius: 5px;
+}
+.otherInfor-title {
+  color: yellow;
+  padding: 3px;
+}
+.tipo-fraqueza {
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pokemons-team {
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  font-size: 30px;
+}
+.pokemons-team li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.container-lista {
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.historico {
+  position: fixed;
+  top: 90%;
+  height: 50px;
+  width: 100px;
+  left: 3%;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.historico:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+  transition: width 2s;
+}
+
+@media screen and (max-width: 800px) {
+  .poke-container {
+    margin: auto;
+    width: 80%;
+  }
+  .inital-info-container {
+    display: block;
+    text-align: center;
+  }
+  .img-container {
+    margin: auto;
+  }
+  .description-poke {
+    margin-top: 20px;
+  }
+  .otherInfo {
+    width: 50%;
+    margin: -5% auto;
+  }
+  /* .imagem-principal {
+
+  */
+}
+.pikachu-gif {
+  width: 100%;
+}
+@media screen and (max-width: 790px) {
+  /* .pikachu-gif {
+    width: 80%;
+    padding: 10px;
+  } */
+  .div-content-pikachu {
+    width: 90%;
+    margin: auto;
+  }
+  /* .main-contant {
+    text-align: center;
+    margin: 10px auto;
+  } */
+  .poke-container {
+    width: 80%;
+    height: 90%;
+  }
+  .title-pokedex {
+    font-size: 27px;
+  }
+  .section-search h2 {
+    font-size: 20px;
+  }
+  .section-search {
+    padding: 10px;
+    gap: 10px;
+  }
+  form input {
+    height: 30px;
+  }
+  .tipo-fraqueza {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img-container {
+    width: 250px;
+    height: 250px;
+  }
+  .imagem-principal {
+    width: 250px;
+    height: 250px;
+  }
+  .description-poke p {
+    margin-top: 10px;
+    font-size: 15px;
+    height: 60px;
+  }
+  .otherInfo {
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .otherInfo span {
+    font-size: 11px;
+    padding: 0;
+  }
+  .tipo-fraqueza {
+    margin-top: -10px;
+    gap: 0;
+    font-size: 12px;
+  }
+  .historico {
+    position: unset;
+    margin-bottom: 10px;
+  }
+  .pokemons-team {
+    background-color: rgba(0, 0, 0, 0.747);
+  }
+  .pokemons-team h5 {
+    font-size: 15px;
+    padding: 5px;
+    color: yellow;
+  }
+  .pokemons-team ul {
+    gap: 0;
+  }
+  .pokemons-team ul img {
+    width: 50px;
+  }
+}

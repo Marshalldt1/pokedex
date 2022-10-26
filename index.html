@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="section-search">
+      <div>
+        <h1 class="title-pokedex">POKEDEX</h1>
+      </div>
+      <h2 data-js="error">What pokemon do you want search ?</h2>
+      <div>
+        <form>
+          <input type="text" name="pokeName" placeholder="Ex: pikachu" autofocus>
+          <button>Search</button>
+        </form>
+      </div>
+    </section>
+    <section class="main-content">
+      <div class="div-content-pikachu">
+        <img data-js="pikachu-gif" class="pikachu-gif" src="src/img/pikachu gif.gif" alt="pikachu">
+      </div>
+
+      <div data-js="conteiner-Main" class="poke-container hidden">
+        <h1 data-js="pokeName">pokemon name</h1>
+        <div class="inital-info-container">
+          <div class="img-container">
+            <img data-js="poke-sprite" class="imagem-principal" src="https://via.placeholder.com/300" alt="">
+          </div>
+          <div class="pokeInfo-container">
+            <div class="description-poke">
+              <p data-js="Description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, officiis.</p>
+            </div>
+            <div class="otherInfo">
+              <div>
+                <span class="otherInfor-title">Height</span>
+                <span data-js="Height"></span>
+              </div>
+              <div>
+                <span class="otherInfor-title">Category</span>
+                <span data-js="Category"></span>
+              </div>
+              <div>
+                <span class="otherInfor-title">Weight</span>
+                <span data-js="Weight"></span>
+              </div>
+              <div>
+                <span class="otherInfor-title">Abilities</span>
+                <span data-js="Abilities"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tipo-fraqueza">
+          <div>
+            <h3 class="otherInfor-title">Evoluções :</h3>
+            <h4 data-js="evolution">agua</h4>
+          </div>
+          <div>
+            <h3 class="otherInfor-title">Type :</h3>
+            <h4 data-js="type-poke">agua</h4>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section data-js="container-lista" class="pokemons-team hidden">
+      <h5>Ultimos pequisados</h5>
+      <ul data-js="lista-poke">
+      </ul>
+    </section>
+    <button data-js="historico" class="historico">Historico</button>
+  </main>
+  <script src="./src/script/getPokeInfo.js"></script>
+  <script src="./src/script/domEvents.js"></script>
+</body>
+
+</html>
