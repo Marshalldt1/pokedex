@@ -66,7 +66,7 @@ const addOtherInfoPoke = (objeto, genera, ability, name, Description) => {
   pokeDescription.textContent = Description;
   pokeAddName.textContent = name;
   pokeWeight.textContent = `${Math.round(objeto.weight * 0.1)} kg`;
-  pokeHeight.textContent = objeto.height;
+  pokeHeight.textContent = `${objeto.height * 10} cm`;
   pokeCategory.textContent = catchSpecie(genera);
   pokeAbilities.textContent = ability.ability.name;
 };
