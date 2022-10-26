@@ -2,7 +2,6 @@ const errorSpam = document.querySelector('[data-js="error"]');
 const mensagemError = document.createElement('span');
 const errorMensage = () => {
   errorSpam.insertAdjacentElement('afterend', mensagemError);
-  // mensagemError.classList.add('eitaa');
   mensagemError.textContent = 'não foi possivel encontrar esse pokemon.';
   mensagemError.style.color = 'crimson';
 };
@@ -21,7 +20,6 @@ const getFetchRequest = async url => {
     if (!response.ok) {
       throw new Errow('Não foi possivel obter os dados');
     }
-    // mensagemError.textContent = '
     mensagemError.remove()
     return response.json();
   } catch (error) {
