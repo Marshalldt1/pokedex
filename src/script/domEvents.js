@@ -13,6 +13,16 @@ const evolution = document.querySelector('[data-js="evolution"]');
 const containerPokeMain = document.querySelector('[data-js="conteiner-Main"]');
 const pikachuGif = document.querySelector('[data-js="pikachu-gif"]');
 
+let counter = 1;
+const changerGif = setInterval(() => {
+  pikachuGif.src = `src/img/poke gif ${counter}.gif`;
+  if (counter > 10) {
+    counter = 1;
+  }
+  console.log(counter);
+  counter++;
+}, 2000);
+
 document
   .querySelector('[data-js="historico"]')
   .addEventListener('click', () => {
@@ -97,6 +107,7 @@ const addEvolutions = objeto => {
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
+  clearInterval(changerGif);
   const inputValue = e.target.pokeName.value;
   const pokeName = inputValue.toLowerCase();
 
