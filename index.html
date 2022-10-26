@@ -20,7 +20,10 @@
       <div>
         <form>
           <input type="text" name="pokeName" placeholder="Ex: pikachu" autofocus>
-          <button>Search</button>
+          <div class="buttons-form">
+            <button>Search</button>
+            <button data-js="historico" class="historico">Historico</button>
+          </div>
         </form>
       </div>
     </section>
@@ -77,7 +80,6 @@
       <ul data-js="lista-poke">
       </ul>
     </section>
-    <button data-js="historico" class="historico">Historico</button>
   </main>
   <script src="./src/script/getPokeInfo.js"></script>
   <script src="./src/script/domEvents.js"></script>

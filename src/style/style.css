@@ -138,7 +138,7 @@ span {
   padding-top: 15px;
   cursor: pointer;
 }
-
+/* 
 .historico {
   position: fixed;
   top: 90%;
@@ -146,10 +146,10 @@ span {
   width: 100px;
   left: 3%;
   cursor: pointer;
-  color: black;
   font-size: 20px;
   border-radius: 5px;
-}
+  color: black;
+} */
 
 .historico:hover {
   background-color: gray;
@@ -188,6 +188,11 @@ span {
 .pikachu-gif {
   width: 100%;
 }
+.buttons-form {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 790px) {
   /* .pikachu-gif {
     width: 80%;
@@ -215,8 +220,13 @@ span {
     padding: 10px;
     gap: 10px;
   }
+  form {
+    display: block;
+    text-align: center;
+  }
   form input {
     height: 30px;
+    margin-bottom: 10px;
   }
   .tipo-fraqueza {
     flex-direction: column;
@@ -248,12 +258,11 @@ span {
     gap: 0;
     font-size: 12px;
   }
-  .historico {
+  /* .historico {
     position: unset;
     margin-bottom: 10px;
     left: 40%;
-    
-  }
+  } */
   .pokemons-team {
     background-color: rgba(0, 0, 0, 0.747);
   }
