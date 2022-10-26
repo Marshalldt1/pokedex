@@ -16,11 +16,11 @@ const pikachuGif = document.querySelector('[data-js="pikachu-gif"]');
 let counter = 1;
 const changerGif = setInterval(() => {
   pikachuGif.src = `src/img/poke gif ${counter}.gif`;
+  counter++;
   if (counter > 10) {
     counter = 1;
   }
   console.log(counter);
-  counter++;
 }, 2000);
 
 document
