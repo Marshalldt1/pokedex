@@ -249,7 +249,7 @@ span {
     font-size: 12px;
   }
   .historico {
-    position: absolute;
+    position: unset;
     margin-bottom: 10px;
     left: 40%;
     
