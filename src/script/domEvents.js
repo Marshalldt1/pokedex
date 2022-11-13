@@ -12,6 +12,9 @@ const containerLista = document.querySelector('[data-js="container-lista"]');
 const evolution = document.querySelector('[data-js="evolution"]');
 const containerPokeMain = document.querySelector('[data-js="conteiner-Main"]');
 const pikachuGif = document.querySelector('[data-js="pikachu-gif"]');
+const modal = document.querySelector('[data-js="modal"]');
+const ashChampion = document.querySelector('[data-js="ash-champion"]');
+const mainContentContainer = document.querySelector('main');
 
 let counter = 1;
 const changerGif = setInterval(() => {
@@ -128,3 +131,23 @@ form.addEventListener('submit', async e => {
   pikachuGif.classList.add('hidden');
   form.reset();
 });
+
+function activeModal() {
+  ashChampion.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    mainContentContainer.classList.add('hidden');
+  });
+}
+activeModal();
+
+function closeModal() {
+  modal.addEventListener('click', e => {
+    const classes = ['modalChampion', 'modal-close', 'tittle-congratulations'];
+    const check = classes.some(item => item === e.target.classList.value);
+    if (check) {
+      modal.classList.add('hidden');
+      mainContentContainer.classList.remove('hidden');
+    }
+  });
+}
+closeModal();

@@ -11,10 +11,29 @@
 </head>
 
 <body background="src/img/background_img.jpg">
+  <section class="modalChampion hidden" data-js="modal">
+    <div class="modalContainer">
+      <div class="congratulations">
+        <h3 class="tittle-congratulations">
+          Congratulations! Ash Ketchum Has Finally Become The World's Greatest Pokémon Trainer
+        </h3>
+      </div>
+      <span class="modal-close">X</span>
+      <div data-js="video" class="video-container">
+        <video src="src/video/world champion.mp4" controls autoplay></video>
+      </div>
+    </div>
+  </section>
   <main>
     <section class="section-search">
       <div>
         <h1 class="title-pokedex">POKÉDEX</h1>
+      </div>
+      <div>
+        <button data-js="ash-champion" class="ash-champion">
+          Ash Champion
+          <img src="src/img/taça.png" alt="">
+        </button>
       </div>
       <h2 data-js="error">what pokemon do you want to search?</h2>
       <div>
@@ -29,7 +48,7 @@
     </section>
     <section class="main-content">
       <div class="div-content-pikachu">
-        <img data-js="pikachu-gif" class="pikachu-gif" src="src/img/poke gif 1.gif" alt="pikachu">
+        <img data-js="pikachu-gif" class="pikachu-gif" src="src/img/poke gif 1.gif" height="370px" alt="pikachu">
       </div>
 
       <div data-js="conteiner-Main" class="poke-container hidden">
@@ -73,7 +92,6 @@
           </div>
         </div>
       </div>
-
     </section>
     <section data-js="container-lista" class="pokemons-team hidden">
       <h5>latest searches</h5>
@@ -81,6 +99,9 @@
       </ul>
     </section>
   </main>
+  <!-- <section class="videoModal">
+  </section> -->
+  <script src="./src/script/modal.js"></script>
   <script src="./src/script/getPokeInfo.js"></script>
   <script src="./src/script/domEvents.js"></script>
 </body>
