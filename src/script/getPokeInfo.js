@@ -24,7 +24,6 @@ const getFetchRequest = async url => {
     return response.json();
   } catch (error) {
     errorMensage();
-    console.log(error);
   }
 };
 
