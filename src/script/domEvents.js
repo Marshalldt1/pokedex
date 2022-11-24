@@ -62,11 +62,18 @@ const getDescriptionTextEn = objeto => {
   const [, objDescription] = objeto.filter(
     ({ language }) => language.name === 'en'
   );
+  console.log(objDescription);
   return objDescription;
 };
 
 const addOtherInfoPoke = (objeto, genera, ability, name, Description) => {
-  pokeDescription.textContent = Description;
+  const descriptionFormated = Description.replace('', ' ').replace(
+    'POKéMON',
+    'pokémon'
+  );
+
+  console.log(Description);
+  pokeDescription.textContent = descriptionFormated;
   pokeAddName.textContent = name;
   pokeWeight.textContent = `${Math.round(objeto.weight * 0.1)} kg`;
   pokeHeight.textContent = `${objeto.height * 10} cm`;
@@ -96,7 +103,7 @@ const addEvolutions = objeto => {
   let secondEvolution = '';
   let thirdEvolution = '';
   const evolves_to = objeto.evolves_to[0];
-  evolution.textContent = `Sem evoluções`;
+  evolution.textContent = `Unevolved`;
   if (objeto.evolves_to.length === 1) {
     secondEvolution = evolves_to.species.name;
     evolution.textContent = `${firstEvolution} → ${secondEvolution}`;

@@ -82,7 +82,6 @@ form button:hover {
   width: 300px;
   height: 300px;
   margin-top: 10px;
-  padding: 5px;
 }
 .img-container {
   width: 300px;
@@ -90,7 +89,6 @@ form button:hover {
   padding: 5px;
 }
 .description-poke {
-  padding: 5px;
   margin-bottom: 10px;
   height: 100%;
 }
@@ -102,9 +100,7 @@ form button:hover {
 span {
   display: block;
 }
-.pokeInfo-container {
-  padding-left: 10px;
-}
+
 .otherInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,7 +115,7 @@ span {
 }
 .tipo-fraqueza {
   margin-top: 30px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
 }
@@ -153,7 +149,6 @@ span {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   flex-direction: column;
   background-color: crimson;
 }
@@ -166,6 +161,7 @@ span {
 .modal-close {
   position: relative;
   text-align: center;
+  height: 20px;
   width: 20px;
   left: 90%;
   border-radius: 50%;
@@ -173,33 +169,23 @@ span {
   background-color: white;
   color: crimson;
   cursor: pointer;
+  font-size: 20px;
 }
 .video-container video {
   width: 100%;
 }
-@media screen and (max-width: 800px) {
-  .modalContainer {
-    max-width: 330px;
-  }
-  .poke-container {
-    margin: auto;
-    width: 80%;
-  }
-  .inital-info-container {
-    display: block;
-    text-align: center;
-  }
-  .img-container {
-    margin: auto;
-  }
-  .description-poke {
-    margin-top: 20px;
-  }
-  .otherInfo {
-    width: 50%;
-    margin: -5% auto;
-  }
+.hidden {
+  display: none;
 }
+
+.description-poke {
+  margin-top: 20px;
+}
+.otherInfo {
+  width: 50%;
+  margin: -5% auto;
+}
+
 .pikachu-gif {
   width: 100%;
 }
@@ -208,13 +194,7 @@ span {
   display: flex;
   justify-content: center;
 }
-/* hidden */
-.hidden {
-  display: none;
-}
-button {
-  transition: all 0.3;
-}
+
 .ash-champion {
   display: flex;
   padding: 10px;
@@ -228,7 +208,26 @@ button {
   background-color: crimson;
   color: white;
 }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 800px) {
+  .inital-info-container {
+    display: block;
+    text-align: center;
+  }
+  .poke-container {
+    margin: auto;
+    width: 80%;
+  }
+  .modalContainer {
+    max-width: 310px;
+  }
+  button {
+    transition: all 0.3;
+  }
+  .inital-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .div-content-pikachu {
     width: 90%;
     margin: auto;
@@ -256,8 +255,10 @@ button {
     margin-bottom: 10px;
   }
   .tipo-fraqueza {
-    flex-direction: column;
     gap: 10px;
+  }
+  .section-search h2 {
+    text-align: center;
   }
   .img-container {
     width: 250px;
@@ -268,7 +269,6 @@ button {
     height: 250px;
   }
   .description-poke p {
-    margin-top: 10px;
     font-size: 15px;
     height: 60px;
   }
@@ -277,13 +277,13 @@ button {
     padding: 10px;
   }
   .otherInfo span {
-    font-size: 11px;
+    font-size: 15px;
     padding: 0;
   }
   .tipo-fraqueza {
     margin-top: -10px;
     gap: 0;
-    font-size: 12px;
+    font-size: 15px;
   }
   .pokemons-team {
     background-color: rgba(0, 0, 0, 0.747);
@@ -298,5 +298,8 @@ button {
   }
   .pokemons-team ul img {
     width: 50px;
+  }
+  .main-content {
+    text-align: center;
   }
 }
